@@ -1,0 +1,27 @@
+# Kamisato Ayaka ice-bloom theme + desktop pet — bundle patch layer.
+#
+# This file is what makes this package a DSH *bundle*: `dsh plugin --profile web
+# add` detects the `dsh.bundle.patch` declaration in package.json and appends
+# this layer to the profile's bundle stack. On `dsh web` startup the launcher
+# composes every bundle's patch list in order, then the user's own
+# cordis.patch.yml, producing the final entry tree the Loader mounts.
+#
+# One row is contributed:
+#   - id: ui-ayaka-theme — loads @deepseek-ai/dsh-client-ui-ayaka-theme.
+#     The node-half apply() registers the /ayaka-assets prefix route on the
+#     webServer (serving bundled images + audio so the plugin is
+#     self-contained — no dependency on the frontend dist's public/). The
+#     browser half is resolved by the modules scanner from the package's
+#     dsh.client declaration and served at /plugins/<name>/client.js; it
+#     registers the ayaka-light / ayaka-dark themes through the ThemeRuntime
+#     and spawns the portrait, pet, and falling sakura petals.
+#
+# A single entry is correct: the Loader mounts the package's node-half once
+# (registering the route once), and the modules scanner picks up the browser
+# half from dsh.client without a second insert. Two inserts of the same package
+# name would load the node-half twice and register /ayaka-assets twice, which
+# the webserver rejects as a duplicate prefix route.
+
+- insert:
+    - id: ui-ayaka-theme
+      name: '@l-vm2k/dsh-ayaka-theme'
