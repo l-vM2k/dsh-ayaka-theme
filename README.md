@@ -23,7 +23,7 @@ dsh plugin --profile web add github:l-vm2k/dsh-ayaka-theme
 dsh --profile web
 ```
 
-打开浏览器，绫华主题已加载 ✨
+打开浏览器，绫华主题已加载 （记得必须是深色主题！！！！否则将会变白花花的一片）✨
 
 ## 卸载
 
