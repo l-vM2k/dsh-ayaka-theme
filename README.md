@@ -1,5 +1,7 @@
 # @l-vm2k/dsh-ayaka-theme
 
+[![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/your-owner/your-plugin-slug)
+
 > 神里绫华 · 冰华主题 + 桌面宠物 — DeepSeek Harness Web 客户端主题插件
 
 一个 DSH 标准 bundle 插件，安装后浏览器自动加载：
@@ -99,7 +101,6 @@ pnpm run build
 # 或分两步：
 pnpm run build      # tsc → lib/types/ + tsdown → lib/index.js + lib/client.js
 ```
-[![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/your-owner/your-plugin-slug)
 
 ## License
 
