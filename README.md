@@ -99,6 +99,7 @@ pnpm run build
 # 或分两步：
 pnpm run build      # tsc → lib/types/ + tsdown → lib/index.js + lib/client.js
 ```
+[![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/your-owner/your-plugin-slug)
 
 ## License
 
